@@ -1,4 +1,4 @@
-These scripts were used to generate results in a paper published in MBE.
+These scripts were used to generate results in a paper published in PNAS.
 
 Input files: Chromosome sized genome assemblies downloaded from NCBI
 

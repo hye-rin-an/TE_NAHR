@@ -1,5 +1,5 @@
       seqfile = /home/work/han/Metazoa_holocentrism/FAW_BAW/fasta/orthologs/inputfile * sequence data filename
-     treefile = /home/work/han/Metazoa_holocentrism/FAW_BAW/dnds/script/tree.for.bootstrapsamples      * tree structure file name
+     treefile = /home/work/han/Metazoa_holocentrism/FAW_BAW/dnds/script/tree      * tree structure file name
       outfile = outputfile           * main result file name
 
         noisy = 9  * 0,1,2,3,9: how much rubbish on the screen

@@ -74,7 +74,7 @@ for (i in uchromo)
         species=vs$assembly[1]
         size=nrow(vs)
         
-	newres=data.frame(sp=species,i,sr,l.ci_sr,u.ci_sr,lc,l.ci_lc,u.ci_lc,line,l.ci_line,u.ci_line,sine,l.ci_sine,u.ci_sine,ltr,l.ci_ltr,u.ci_ltr,dna,l.ci_dna,u.ci_dna,rc,l.ci_rc,u.ci_rc,st,l.ci_st,u.ci_st,size)
+	newres=data.frame(species=species,chrnb=i,sr,l.ci_sr,u.ci_sr,lc,l.ci_lc,u.ci_lc,line,l.ci_line,u.ci_line,sine,l.ci_sine,u.ci_sine,ltr,l.ci_ltr,u.ci_ltr,dna,l.ci_dna,u.ci_dna,rc,l.ci_rc,u.ci_rc,st,l.ci_st,u.ci_st,size)
         res<-rbind(res,newres)
 	print(newres)
 }

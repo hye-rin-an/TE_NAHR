@@ -38,7 +38,7 @@ for (i in uchromo)
         u.ci=sort(bts)[0.975*B]
         size=sum(vss$total)
         
-	newres=data.frame(species=j,i,totalrepeat_density=tot,l.ci,u.ci,size)
+	newres=data.frame(species=j,chrnb=i,totalrepeat_density=tot,l.ci,u.ci,size)
         res<-rbind(res,newres)
 	print(newres)
 }}

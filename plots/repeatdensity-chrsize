@@ -1,0 +1,58 @@
+plot1<- total%>%
+  filter(order=="Coleoptera") %>% 
+  ggplot(aes(size, total)) +       
+  geom_point(size=2) +
+  geom_errorbar(aes(ymin = l.ci_total, ymax = u.ci_total)) + stat_cor(method = "spearman",label.y=0.05,size=7,cor.coef.name ="rho") +
+  scale_x_continuous(trans="log10") + ggtitle("Coleoptera")  +facet_grid(~species, scales = "free")  +theme(plot.title = element_text(size = 30, face = "bold"), panel.background = element_rect(fill = "white", colour = "grey50"),strip.text = element_text(size = 20,face = "italic"),axis.text.x = element_text(size=15),axis.text.y = element_text(size=15),axis.title.x = element_text(size=25),axis.title.y = element_text(size=25)) +labs(y= "proportion of repeats", x = "chromosome size (Mb)",size = 20)+ expand_limits(x = 0, y = 0)+scale_x_continuous(limits = c(0,NA))
+
+plot2<- total%>% 
+  filter(order=="Collembola") %>% 
+  ggplot(aes(size, total)) +       
+  geom_point(size=2) +
+  geom_errorbar(aes(ymin = l.ci_total, ymax = u.ci_total)) + stat_cor(method = "spearman",label.y=0.01,size=7,cor.coef.name ="rho") + ggtitle("Collembola") +
+  scale_x_continuous(trans="log10")+facet_grid(~species, scales = "free")  +theme(plot.title = element_text(size = 30, face = "bold"), panel.background = element_rect(fill = "white", colour = "grey50"),strip.text = element_text(size = 20,face = "italic"),axis.text.x = element_text(size=15),axis.text.y = element_text(size=15),axis.title.x = element_text(size=25),axis.title.y = element_text(size=25)) +labs(y= "proportion of repeats", x = "chromosome size (Mb)",size = 20)+ expand_limits(x = 0, y = 0)+scale_x_continuous(limits = c(0,NA))
+
+plot3<-total%>%  
+  filter(order=="Diptera" ) %>% 
+  ggplot(aes(size, total)) +       
+  geom_point(size=2) +
+  geom_errorbar(aes(ymin = l.ci_total, ymax = u.ci_total))  + stat_cor(method = "spearman",label.y=0.1,size=7,cor.coef.name ="rho") + ggtitle("Diptera")  +scale_x_continuous(trans="log10")+facet_grid(~species, scales = "free")  +theme(plot.title = element_text(size = 30, face = "bold"), panel.background = element_rect(fill = "white", colour = "grey50"),strip.text = element_text(size = 20,face = "italic"),axis.text.x = element_text(size=15),axis.text.y = element_text(size=15),axis.title.x = element_text(size=25),axis.title.y = element_text(size=25)) +labs(y= "proportion of repeats", x = "chromosome size (Mb)",size = 20)+ expand_limits(x = 0, y = 0)+scale_x_continuous(limits = c(0,NA))
+pdf("analysis/article/diptera.pdf", width=10.8, height=5)
+print(plot3)
+dev.off()
+
+plot4<- total%>%  
+  filter(order=="Hymenoptera" ) %>% 
+  ggplot(aes(size, total)) +       
+  geom_point(size=2) +
+  geom_errorbar(aes(ymin = l.ci_total, ymax = u.ci_total)) +stat_cor(method = "spearman",label.y=0.6, size=5)  + ggtitle("Hymenoptera")  +
+  scale_x_continuous(trans="log10")   +facet_wrap(~species, scales = "free")  +theme(plot.title = element_text(size = 30, face = "bold"), panel.background = element_rect(fill = "white", colour = "grey50"),strip.text = element_text(size = 20,face = "italic"),axis.text.x = element_text(size=15),axis.text.y = element_text(size=15),axis.title.x = element_text(size=25),axis.title.y = element_text(size=25)) +labs(y= "proportion of repeats", x = "chromosome size (Mb)",size = 20)+ expand_limits(x = 0, y = 0)+scale_x_continuous(limits = c(0,NA))
+
+plot5<- total%>%  
+  filter(order=="Neuroptera" ) %>% 
+  ggplot(aes(size, total)) +       
+  geom_point(size=2) +
+  geom_errorbar(aes(ymin = l.ci_total, ymax = u.ci_total)) + stat_cor(method = "spearman",label.y=0.1,size=10) + ggtitle("Neuroptera")   +
+  scale_x_continuous(trans="log10")  +facet_wrap(~species, scales = "free")  +theme(plot.title = element_text(size = 40, face = "bold"), panel.background = element_rect(fill = "white", colour = "grey50"),strip.text = element_text(size = 30,face = "italic"),axis.text.x = element_text(size=25),axis.text.y = element_text(size=15),axis.title.x = element_text(size=35),axis.title.y = element_text(size=35)) +labs(y= "proportion of repeats", x = "chromosome size (Mb)",size = 30)+ expand_limits(x = 0, y = 0)+scale_x_continuous(limits = c(0,NA))
+
+plot6<-total%>%  
+  filter(order=="Hemiptera" ) %>% 
+  ggplot(aes(size, total)) +       
+  geom_point(size=2) +
+  geom_errorbar(aes(ymin = l.ci_total, ymax = u.ci_total))  + stat_cor(method = "spearman",label.y=0.1,size=5)  + ggtitle("Hemiptera") +
+  scale_x_continuous(trans="log10")+facet_wrap(~species, scales = "free")  +theme(plot.title = element_text(size = 30, face = "bold"), panel.background = element_rect(fill = "white", colour = "grey50"),strip.text = element_text(size = 20,face = "italic"),axis.text.x = element_text(size=15),axis.text.y = element_text(size=15),axis.title.x = element_text(size=25),axis.title.y = element_text(size=25)) +labs(y= "proportion of repeats", x = "chromosome size (Mb)",size = 20)+ expand_limits(x = 0, y = 0)+scale_x_continuous(limits = c(0,NA))
+
+
+plot7<- total%>%  
+  filter(order=="Lepidoptera" ) %>% 
+  ggplot(aes(size, total)) +       
+  geom_point(size=1.5) +
+  geom_errorbar(aes(ymin = l.ci_total, ymax = u.ci_total))  + stat_cor(method = "spearman",label.y=0.05,size=7)  + 
+  scale_x_continuous(trans="log10")  +facet_wrap(~species, scales = "free")  +theme( panel.background = element_rect(fill = "white", colour = "grey50"),strip.text = element_text(size = 20,face = "italic"),axis.text.x = element_text(size=15),axis.text.y = element_text(size=15),axis.title.x = element_text(size=30),axis.title.y = element_text(size=30))  + expand_limits(x = 0, y = 0)+scale_x_continuous(limits = c(0,NA)) +labs(y= "proportion of repeats", x = "chromosome size (Mb)")
+
+plot8<- total%>%  
+  filter(order=="Thysanoptera" ) %>% 
+  ggplot(aes(size, total)) +       
+  geom_point(size=1.5) +
+  geom_errorbar(aes(ymin = l.ci_total, ymax = u.ci_total))  + stat_cor(method = "spearman",label.y=0.3,size=5) + ggtitle("Thysanoptera") +
+  scale_x_continuous(trans="log10")+facet_wrap(~species, scales = "free")  +theme(plot.title = element_text(size = 40, face = "bold"), panel.background = element_rect(fill = "white", colour = "grey50"),strip.text = element_text(size = 30,face = "italic"),axis.text.x = element_text(size=25),axis.text.y = element_text(size=15),axis.title.x = element_text(size=35),axis.title.y = element_text(size=35)) +labs(y= "proportion of repeats", x = "chromosome size (Mb)",size = 30)+ expand_limits(x = 0, y = 0)+scale_x_continuous(limits = c(0,NA))

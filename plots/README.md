@@ -1,1 +1,1 @@
-These are the scripts for generating plots figuring on the paper.
+These are the scripts used for generating plots figuring on the paper.

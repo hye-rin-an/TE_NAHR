@@ -38,7 +38,7 @@ for (i in uassembly)
                 species=vss$assembly[1]
                 size=nrow(vss)
 
-                newres=data.frame(sp=species,j,CDS,l.ci_CDS,u.ci_CDS,size)
+                newres=data.frame(species=species,chrnb=j,CDS,l.ci_CDS,u.ci_CDS,size)
                 res<-rbind(res,newres)
                 print(res)
 }}

@@ -24,4 +24,4 @@ Input files: aa sequences (*.faa) of FAW and Beet Armyworm (BAW) from NCBI
 - run codeml on bootstrapped samples: "runcodeml.for.bootstrapsamples.py" with "codeml.ctl.for.bootstrapsamples" and "tree.for.bootstrapsamples"
 - retrieve calculated rates: "dnds.py"
 
-5) Bootstrap confidence intervals: bootstrap.*.R
+5) Bootstrap confidence intervals: bootstrap.*

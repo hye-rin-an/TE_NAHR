@@ -27,8 +27,9 @@ dfch= data.frame(list(chromosome=i,startpoint=c(newsp),X=c(neww),size=nrow(vs)/1
 df=rbind(df,dfch)
 }}
 
-p1=ggplot(frugi, aes(x=startpoint/1000000, y=X/total))  + geom_line()+ scale_x_continuous()+theme_bw()+theme( panel.background = element_rect(fill = "white", colour = "grey50"),strip.text = element_text(size = 30),axis.text.x = element_text(size=25),axis.text.y = element_text(size=25),axis.title.x = element_text(size=35),axis.title.y = element_text(size=35)) +labs(y= "repeat density", x = "(Mb)",size = 30,legend.position = "none",panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank())+facet_grid(rows=vars(chromosome))
-p1
-pdf("TEalongchr.pdf",width=70,height=150)
-p1
+df=arrange(df,df$size)
+order=c(unique(df$chromosome))
+p2=ggplot(df, aes(x=startpoint/10, y=X))  + geom_line()+ scale_x_continuous()+theme_bw()+theme( panel.background = element_rect(fill = "white", colour = "grey50"),strip.text = element_text(size = 30),axis.text.x = element_text(size=25),axis.text.y = element_text(size=25),axis.title.x = element_text(size=35),axis.title.y = element_text(size=35)) +labs(y= "repeat density", x = "(Mb)",size = 30,legend.position = "none",panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank())+facet_wrap(factor(df$chromosome,levels=order))
+pdf("TEalongchr.pdf",width=17,height=13)
+p2
 dev.off()

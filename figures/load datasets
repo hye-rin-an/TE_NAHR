@@ -1,7 +1,7 @@
 repeat_byclass<- read.table("result/final.bts_byclass.wlib.tsv",sep = "\t",head=T)
 dfGC=read.table("result/btsGC.tsv",sep = "\t",head=T)
 dfcds=read.table("result/final.btsCDS.tsv",sep="\t",head=T)
-total=read.tabe("result/bts.totalrepeat.tsv",sep="\t",head=T)
+total=read.table("result/bts.totalrepeat.tsv",sep="\t",head=T)
 
 all_df <- merge(dfGC,repeat_byclass, 
         by.x=c("species","chrnb"),by.y=c("species","chrnb"))

@@ -1,0 +1,11 @@
+data_path_1     /scratch/hran/sfrugi/data/DFE-a/data
+data_path_2     /scratch/hran/sfrugi/data/DFE-a/data/n1_100_adv
+sfs_input_file  /scratch/hran/sfrugi/result/bts_SFS_for_DFE-a/sfs.txt
+est_dfe_results_dir     /scratch/hran/sfrugi/result/bts_DFE-a/OUT/
+site_class 2
+fold       1
+epochs     1
+mean_s_variable 1
+mean_s -0.1
+beta_variable 1
+beta 0.5

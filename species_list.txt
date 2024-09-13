@@ -1,0 +1,10 @@
+GCF_905147365.1_ilAriAges1.1_genomic.fna
+GCF_014905235.1_Bmori_2016v1.0_genomic.fna
+GCA_902850365.2_PGI_CHILSU_V6_genomic.fna
+GCF_009731565.1_Dplex_v4_genomic.fna
+GCA_933534255.1_IP_504.v2_0_genomic.fna
+GCF_023078275.1_LegGlyc_1.1_genomic.fna
+GCF_014839805.1_JHU_Msex_v1.0_genomic.fna
+GCF_024362695.1_ilPecGoss1.1_genomic.fna
+GCF_932276165.1_ilPluXylo3.1_genomic.fna
+sfC.ver6.fa

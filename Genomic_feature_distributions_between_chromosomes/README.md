@@ -26,3 +26,6 @@ Input: fasta files
 6) Calculate CDS density: "CDSdensity.py"
 
 - bootstrapping on window for confidence intervals: "bootstrap.*.R"
+
+- Calculate inter-TE distances: TE_distance.pl
+Input: *.out files

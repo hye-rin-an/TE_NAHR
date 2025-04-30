@@ -1,8 +1,0 @@
-data_path_1     /scratch/hran/sfrugi/data/DFE-a/data/
-divergence_file        /scratch/hran/sfrugi/data/divergence_by_sample/IN/divergence_file_SS
-est_alpha_omega_results_file    /scratch/hran/sfrugi/result/bts_DFE-a/in/est_alpha_omega.out
-est_dfe_results_file    /scratch/hran/sfrugi/result/bts_DFE-a/in/est_dfe.out
-neut_egf_file           /scratch/hran/sfrugi/result/bts_DFE-a/in/neut_egf.out
-sel_egf_file            /scratch/hran/sfrugi/result/bts_DFE-a/in/sel_egf.out
-do_jukes_cantor         1
-remove_poly             1
